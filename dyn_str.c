@@ -1,3 +1,10 @@
+/**
+ * @file dyn_str.c
+ * @author Lukáš Podvojský (xpodvo00)
+ * @brief Dynamic string library
+ * @date 2022-07-24
+ */
+
 #include "dyn_str.h"
 
 extern int errno;

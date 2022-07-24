@@ -1,3 +1,10 @@
+/**
+ * @file dyn_str.h
+ * @author Lukáš Podvojský (xpodvo00)
+ * @brief Dynamic string library
+ * @date 2022-07-24
+ */
+
 #ifndef DYN_STR_H
 #define DYN_STR_H
 

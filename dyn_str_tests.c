@@ -1,3 +1,10 @@
+/**
+ * @file dyn_str_tests.c
+ * @author Lukáš Podvojský (xpodvo00)
+ * @brief Tests for dynamic string library
+ * @date 2022-07-24
+ */
+
 #include "dyn_str.h"
 
 int main() {
