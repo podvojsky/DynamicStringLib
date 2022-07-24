@@ -14,4 +14,6 @@ typedef struct {
     int size;       // String size that has been alocated
 } DynamicString;
 
+void DynStrInit(DynamicString *s);
+
 #endif
