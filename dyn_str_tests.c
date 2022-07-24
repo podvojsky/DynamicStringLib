@@ -11,10 +11,12 @@ int main() {
     DynamicString test_string;
 
     DynStrInit(&test_string);
+    DynStrDebug(&test_string);
+    printf("Successfully initiated!\n\n");
 
-    printf("Value: %s\n", test_string.value);
-    printf("Lenght: %d\n", test_string.len);
-    printf("Size: %d\n", test_string.size);
-    printf("Successfully initiated!\n");
+    DynStrFree(&test_string);
+    DynStrDebug(&test_string);
+    printf("Successfully freed!\n\n");
+
     return EXIT_SUCCESS;
 }
