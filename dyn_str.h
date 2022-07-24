@@ -1,6 +1,8 @@
 #ifndef DYN_STR_H
 #define DYN_STR_H
 
+// Number of bytes to allocate on top of already allocated space
+// when reallocation is performed.
 #define ALLOC_BLOCK_SIZE 1024
 
 #include <stdlib.h>
