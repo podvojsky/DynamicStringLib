@@ -24,7 +24,13 @@ typedef struct {
 } DynamicString;
 
 void DynStrInit(DynamicString *s);
+
 void DynStrFree(DynamicString *s);
+
 void DynStrDebug(DynamicString *s);
+
+void DynStrClean(DynamicString *s);
+
+void DynStrAppend(DynamicString *s, char c);
 
 #endif
