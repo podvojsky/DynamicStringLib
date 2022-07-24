@@ -15,6 +15,9 @@ int main() {
     printf("Successfully initiated!\n\n");
 
     DynStrAppend(&test_string, 'a');
+    DynStrAppend(&test_string, 'b');
+    DynStrAppend(&test_string, 'c');
+    DynStrAppendBeg(&test_string, 'd');
     DynStrDebug(&test_string);
     printf("Successfully appended!\n\n");
 
