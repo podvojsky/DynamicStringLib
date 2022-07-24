@@ -25,3 +25,17 @@ void DynStrInit(DynamicString *s) {
     s->len = 0;
     strcpy(s->value, "\0");
 }
+
+void DynStrFree(DynamicString *s) {
+    free(s->value);
+    s->size = 0;
+    s->len = 0;
+}
+
+void DynStrDebug(DynamicString *s) {
+    if (s->size != 0) {
+        printf("Value: %s\n", s->value);
+    }
+    printf("Lenght: %d\n", s->len);
+    printf("Size: %d\n", s->size);
+}
