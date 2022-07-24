@@ -14,6 +14,14 @@ int main() {
     DynStrDebug(&test_string);
     printf("Successfully initiated!\n\n");
 
+    DynStrAppend(&test_string, 'a');
+    DynStrDebug(&test_string);
+    printf("Successfully appended!\n\n");
+
+    DynStrClean(&test_string);
+    DynStrDebug(&test_string);
+    printf("Successfully cleaned!\n\n");
+
     DynStrFree(&test_string);
     DynStrDebug(&test_string);
     printf("Successfully freed!\n\n");
