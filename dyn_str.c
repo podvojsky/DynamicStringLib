@@ -81,3 +81,28 @@ void DynStrAppend(DynamicString *s, char c) {
     s->value[s->len+1] = '\0';
     ++(s->len);
 }
+
+/**
+ * @brief Append character to the beginning of the string.
+ * 
+ * @param s Pointer to dynamic string.
+ * @param c Character to append.
+ */
+void DynStrAppendBeg(DynamicString *s, char c) {
+    if (s->size == 0) {
+        fprintf(stderr, "Inside DynStrAppendBeg(): String wasn't initialized\n");
+    }
+    if (s->len+1 > s->size-1) {
+        s->value = realloc(s->value, s->size + ALLOC_BLOCK_SIZE);
+        if (s->value == NULL) {
+            perror("Inside DynStrAppendBeg()");
+        }
+        s->size = s->size + ALLOC_BLOCK_SIZE;
+    }
+
+    for (int i = s->len; i >= 0; --i) {
+        s->value[i+1] = s->value[i];
+    }
+    s->value[0] = c;
+    ++(s->len);
+}

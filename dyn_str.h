@@ -33,4 +33,6 @@ void DynStrClean(DynamicString *s);
 
 void DynStrAppend(DynamicString *s, char c);
 
+void DynStrAppendBeg(DynamicString *s, char c);
+
 #endif
