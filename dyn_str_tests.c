@@ -9,6 +9,7 @@
 
 int main() {
     DynamicString test_string;
+    char test_string2[20] = "Hello World!";
 
     DynStrInit(&test_string);
     DynStrDebug(&test_string);
@@ -18,8 +19,13 @@ int main() {
     DynStrAppend(&test_string, 'b');
     DynStrAppend(&test_string, 'c');
     DynStrAppendBeg(&test_string, 'd');
+    DynStrAppendBeg(&test_string, 'e');
     DynStrDebug(&test_string);
     printf("Successfully appended!\n\n");
+
+    DynStrSet(&test_string, test_string2);
+    DynStrDebug(&test_string);
+    printf("Successfully set!\n\n");
 
     DynStrClean(&test_string);
     DynStrDebug(&test_string);
