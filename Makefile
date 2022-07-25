@@ -1,5 +1,5 @@
 CC = gcc
-CFLAG = -Werror -Wall -g
+CFLAG = -Werror -Wall -std=c99 -g
 LIBS = 
 EXE = run_tests
 OBJ = 
@@ -8,10 +8,13 @@ ${EXE}: dyn_str_tests.o dyn_str.o
 	${CC} ${CFLAG} dyn_str_tests.o dyn_str.o -o ${EXE} ${LIBS}
 
 dyn_str_tests.o: dyn_str_tests.c dyn_str.h
-	${CC} -c dyn_str_tests.c
+	${CC} -g -c dyn_str_tests.c
 
 dyn_str.o: dyn_str.c dyn_str.h
-	${CC} -c dyn_str.c
+	${CC} -g -c dyn_str.c
+
+run:
+	make && valgrind --leak-check=full ./${EXE}
 
 clean:
 	rm *.o ${EXE}
