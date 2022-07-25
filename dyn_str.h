@@ -35,4 +35,8 @@ void DynStrAppend(DynamicString *s, char c);
 
 void DynStrAppendBeg(DynamicString *s, char c);
 
+void DynStrSizeCheck(DynamicString *s, int char_size);
+
+void DynStrSet(DynamicString *s, const char *value);
+
 #endif
