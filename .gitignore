@@ -1,6 +1,6 @@
 # Project specific
 /.vscode
-/run_tests
+/dyn_str_tests
 
 # Prerequisites
 *.d
